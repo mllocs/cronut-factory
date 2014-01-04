@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Simple Cronut</title>
+  </head>
+  <body>
+    <div id='simple-cronut'></div>
+    <script src='../vendor/raphael-min-2.1.2.js'></script>
+    <script src='../cronut-factory-0.1.0.js'></script>
+    <script>
+      CronutFactory.create({
+        container: document.getElementById('simple-cronut')
+      , width: 500
+      , height: 500
+      , radius: 200
+      , stroke_width: 100
+      , stroke: 'violet'
+      , archs: [
+          {value: 10, css_class: 'path-1', stroke: 'green',  stroke_width: 60}
+        , {value: 20, css_class: 'path-2', stroke: 'orange', stroke_width: 70}
+        , {value: 30, css_class: 'path-3', stroke: 'blue',   stroke_width: 80}
+        , {value: 40, css_class: 'path-4', stroke: 'red',    stroke_width: 90}
+        , {value: 50}
+        ]
+      });
+    </script>
+  </body>
+</html>
