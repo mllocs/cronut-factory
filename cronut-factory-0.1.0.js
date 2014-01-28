@@ -80,7 +80,7 @@
       }
 
       if (css_class) {
-        $(arch.node).attr('class', css_class);
+        arch.node.setAttribute('class', css_class);
       }
 
       arch.animate({arc: arc(to - from)}, 500);
