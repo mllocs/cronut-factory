@@ -47,7 +47,8 @@
       , total        = options.total
       , radius       = options.radius
       , stroke       = options.stroke
-      , stroke_width = options.stroke_width;
+      , stroke_width = options.stroke_width
+      , gutter       = options.gutter;
 
     function arc(part) {
       return [position_x, position_y, part, total, radius];
@@ -71,6 +72,11 @@
         , position_x
         , position_y
         );
+      }
+
+      if (gutter) {
+        from = from + (total * gutter / 100);
+        to = to - (total * gutter / 100);
       }
 
       if (css_class) {
@@ -110,6 +116,7 @@
     , position_x   : options.width / 2
     , position_y   : options.height / 2
     , radius       : options.radius
+    , gutter       : options.gutter
     , total        : total
     });
 
