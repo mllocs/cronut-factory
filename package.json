@@ -1,0 +1,21 @@
+{
+  "name": "cronut-factory",
+  "version": "0.1.1",
+  "description": "Simple library to draw cronuts on the web. Depends on Raphael.",
+  "main": "cronut-factory.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mllocs/cronut-factory.git"
+  },
+  "keywords": [
+    "cronut",
+    "raphael",
+    "svg"
+  ],
+  "author": "Màxim Colls",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mllocs/cronut-factory/issues"
+  },
+  "homepage": "https://github.com/mllocs/cronut-factory"
+}

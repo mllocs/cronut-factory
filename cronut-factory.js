@@ -1,4 +1,19 @@
-(function () {
+(function (root, factory) {
+  if (typeof define === 'function' && define.amd) {
+    // AMD. Register as an anonymous module.
+    define(['raphael'], function (b) {
+      return (root.returnExportsGlobal = factory(b));
+    });
+  } else if (typeof exports === 'object') {
+    // Node. Does not work with strict CommonJS, but
+    // only CommonJS-like enviroments that support module.exports,
+    // like Node.
+    module.exports = factory(require('raphael'));
+  } else {
+    // Browser globals
+    root.returnExportsGlobal = factory(root.Raphael);
+  }
+}(this, function (Raphael) {
   var CronutFactory = {};
 
   /**
@@ -136,5 +151,5 @@
     }
   };
 
-  this.CronutFactory = CronutFactory;
-})();
+  return CronutFactory;
+}));
